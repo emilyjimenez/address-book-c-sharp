@@ -8,14 +8,14 @@ namespace AddressBook.Models
     private static List<Name> _instances = new List<Name> {};
     private string _name;
     private int _id;
-    private List<Name> _names;
+    private List<Address> _addresses;
 
-    public Name (string name)
+    public Name (string contactName)
     {
-      _name = name;
+      _name = contactName;
       _instances.Add(this);
       _id = _instances.Count;
-      _names = new List<Name> {};
+      _addresses = new List<Address> {};
     }
 
     public string GetName()
@@ -38,14 +38,14 @@ namespace AddressBook.Models
       return _instances[searchId-1];
     }
 
-    public List<Name> GetNames()
+    public List<Address> GetAddresses()
     {
-      return _names;
+      return _addresses;
     }
 
-    public void AddName(Name name)
+    public void AddAddress(Address address)
     {
-      _names.Add(name);
+      _addresses.Add(address);
     }
   }
 }

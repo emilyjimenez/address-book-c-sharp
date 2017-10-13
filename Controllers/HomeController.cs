@@ -20,7 +20,7 @@ namespace AddressBook.Controllers
       return View(allNames);
     }
 
-    [HttpGet("/artists/new")]
+    [HttpGet("/names/new")]
     public ActionResult NameForm()
     {
       return View();
@@ -39,7 +39,7 @@ namespace AddressBook.Controllers
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Name selectedName = Name.Find(id);
-      List<Address> nameAddresses = selectedName.GetNames();
+      List<Address> nameAddresses = selectedName.GetAddresses();
       model.Add("name", selectedName);
       model.Add("addresses", nameAddresses);
       return View(model);
@@ -50,18 +50,18 @@ namespace AddressBook.Controllers
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Name selectedName = Name.Find(id);
-      List<Address> nameAddresses = selectedName.GetNames();
+      List<Address> nameAddresses = selectedName.GetAddresses();
       model.Add("name", selectedName);
       model.Add("addresses", nameAddresses);
       return View(model);
     }
 
-    [HttpPost("/cds")]
+    [HttpPost("/addresses")]
     public ActionResult AddAddress()
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Name selectedName = Name.Find(Int32.Parse(Request.Form["name-id"]));
-      List<Address> nameAddresses = selectedName.GetNames();
+      List<Address> nameAddresses = selectedName.GetAddresses();
       string addressStreet = Request.Form["address-street"];
       string addressCityState = Request.Form["address-city-state"];
       string addressZip = Request.Form["address-zip"];
@@ -73,7 +73,7 @@ namespace AddressBook.Controllers
     }
 
     [HttpGet("/addresses/{id}")]
-    public ActionResult NameDetail(int id)
+    public ActionResult AddressDetail(int id)
     {
       Address address = Address.Find(id);
       return View(address);

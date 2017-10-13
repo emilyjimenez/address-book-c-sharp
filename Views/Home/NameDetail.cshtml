@@ -4,11 +4,11 @@
 
 <h1>Contact Info:</h1>
 <ul>
-@foreach (var address in @Model['addresses'])
+@foreach (var address in @Model["addresses"])
 {
-    <li>Street: @address.GetStreet()</li>
-    <li>City, State: @address.GetCityState()</li>
-    <li>Zip Code:  @address.GetZip()</li>
+    <li>@address.GetStreet()</li>
+    <li>@address.GetCityState()</li>
+    <li>@address.GetZip()</li>
 }
 </ul>
 <p><a href='/names/@Model["name"].GetId()/addresses/new'>Add a new address</a><p>
