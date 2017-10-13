@@ -1,3 +1,11 @@
 @{
   Layout = "_Layout";
 }
+<h1>Add a contact</h1>
+<p class='lead'>Add your contact here:</p>
+<form action='/names' method='post'>
+  <label for='contact-name'>Contact Name:</label>
+  <input id='contact-name' name='contact-name' type='text'>
+  <button type='submit'>Add</button>
+</form>
+<p><a href='/'>Back to main page</a></p>
