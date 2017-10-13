@@ -5,16 +5,16 @@ namespace AddressBook.Models
 {
   public class Name
   {
-    private static List<Name> _instances; = new List<Name> {};
+    private static List<Name> _instances = new List<Name> {};
     private string _name;
     private int _id;
     private List<Name> _names;
 
-    public Name(string name)
+    public Name (string name)
     {
       _name = name;
       _instances.Add(this);
-      _id = instances.Count;
+      _id = _instances.Count;
       _names = new List<Name> {};
     }
 

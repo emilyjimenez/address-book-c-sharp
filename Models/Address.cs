@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AddressBook.Models
 {
-  public class Adrress
+  public class Address
   {
     private string _street;
     private string _cityState;
@@ -11,7 +11,7 @@ namespace AddressBook.Models
     private int _id;
     private static List<Address> _instances = new List<Address> {};
 
-    public Address (string street, string cityState, string zip, int id)
+    public Address (string street, string cityState, string zip)
     {
       _street = street;
       _cityState = cityState;
