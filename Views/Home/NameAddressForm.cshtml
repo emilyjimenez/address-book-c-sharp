@@ -1,3 +1,15 @@
 @{
   Layout = "_Layout";
 }
+
+<h1>Add a new address to @Model["name"].GetName()</h1>
+<form action='/names' method='post'>
+  <input id='name-id' name='name-id' type='hidden' value='@Model["name"].GetId()'>
+  <label for='address-street'>Street Adress:</label>
+  <input id='address-street' name='address-street' type='text'>
+  <label for='address-city-state'>City and State:</label>
+  <input id='address-city-state' name='address-city-state' type='text'>
+  <label for='address-zip'>Zip Code:</label>
+  <input id='address-zip' name='address-zip' type='number'>
+  <button type='submit'>Add Contact</button>
+</form>
