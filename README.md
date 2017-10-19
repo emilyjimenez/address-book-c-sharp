@@ -16,7 +16,7 @@ _An address book that is formed by adding names, then adding addresses to the co
 | It will allow user to view contact names that upon clicking will show addresses  | John Smith  | 123 Cherry Ln WA 97231 |
 | It will allow user to add new names, as many as they please  | Ada Lovelace  | Ada Lovelace  |
 | It will allow the user to add an address once user has submitted name  |   |   |
-| It will allow the user to add as many names as they would like  | user types in multiple addresses | multiple addresses are displayed in an unordered list |
+| It will allow the user to add as many addresses to the specified name as they would like  | user types in multiple addresses | multiple addresses are displayed in an unordered list |
 | It will allow user to go back to main page at from any page  | link to main page  | redirects to main page |
 
 ## Setup/Installation Requirements
